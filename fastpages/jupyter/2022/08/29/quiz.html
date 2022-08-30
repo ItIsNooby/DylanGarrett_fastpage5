@@ -162,7 +162,7 @@ window.onload = wrap_img;
 <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Hello, '</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" running "</span> <span class="o">+</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"You will be asked "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" questions."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"You will be asked "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" questions and will need to answer in a yes/no format."</span><span class="p">)</span>
 <span class="n">question_and_answer</span><span class="p">(</span><span class="s2">"Are you ready to take a test?"</span><span class="p">)</span>
 
 <span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">"Is 1+2+3+4+5 equal to 15?"</span><span class="p">)</span>
@@ -200,12 +200,16 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Hello, dylan running c:\Users\dylan\AppData\Local\Programs\Python\Python310\python.exe
-You will be asked 3 questions.
+You will be asked 3 questions and will need to answer in a yes/no format.
 Question: Are you ready to take a test?
-Answer: 
-Question: What command is used to include other functions that are developed?
- is incorrect!
-Question: What command in this example is used to evaluate a response?
+Answer: yes
+Question: Is 1+2+3+4+5 equal to 15?
+no is incorrect!
+Question: Is late start scientifically proven to be better for the mental health of students?
+yes is correct!
+Question: Is touching grass difficult?
+yes is correct!
+dylan you scored 2/3
 </pre>
 </div>
 </div>
