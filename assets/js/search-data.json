@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "My personal api page",
-            "content": "import requests url = &quot;https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random&quot; headers = { &quot;accept&quot;: &quot;application/json&quot;, &quot;X-RapidAPI-Key&quot;: &quot;86d3c88c86mshe0398d184fbafbdp102e5bjsn36861be80236&quot;, &quot;X-RapidAPI-Host&quot;: &quot;matchilling-chuck-norris-jokes-v1.p.rapidapi.com&quot; } response = requests.request(&quot;GET&quot;, url, headers=headers) print(str(value)) . NameError Traceback (most recent call last) &lt;ipython-input-42-3494dbfdea7b&gt; in &lt;module&gt; 11 response = requests.request(&#34;GET&#34;, url, headers=headers) 12 &gt; 13 print(str(value)) NameError: name &#39;value&#39; is not defined .",
+            "content": "import requests url = &quot;https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random&quot; headers = { &quot;accept&quot;: &quot;application/json&quot;, &quot;X-RapidAPI-Key&quot;: &quot;86d3c88c86mshe0398d184fbafbdp102e5bjsn36861be80236&quot;, &quot;X-RapidAPI-Host&quot;: &quot;matchilling-chuck-norris-jokes-v1.p.rapidapi.com&quot; } response = requests.request(&quot;GET&quot;, url, headers=headers) print(response.text) .",
             "url": "https://itisnooby.github.io/DylanGarrett_fastpage5/fastpages/jupyter/2022/10/10/myapi.html",
             "relUrl": "/fastpages/jupyter/2022/10/10/myapi.html",
             "date": " • Oct 10, 2022"
