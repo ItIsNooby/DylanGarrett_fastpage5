@@ -38,9 +38,7 @@ baseurl: "/DylanGarrett_fastpage5" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
 minima:
-  social_links:
-    twitter: fastdotai
-    github: fastai
+  style: dark
 
 # Set this to true to get LaTeX math equation support
 use_math: 
