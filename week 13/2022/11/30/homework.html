@@ -160,77 +160,30 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">DecimalToBinary</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
-    <span class="n">strs</span> <span class="o">=</span> <span class="s2">""</span>
-    <span class="k">while</span> <span class="n">num</span><span class="p">:</span>
-        <span class="c1"># if (num &amp; 1) = 1</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">):</span>
-            <span class="n">strs</span> <span class="o">+=</span> <span class="s2">"1"</span>
-        <span class="c1"># if (num &amp; 1) = 0</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">strs</span> <span class="o">+=</span> <span class="s2">"0"</span>
-        <span class="c1"># right shift by 1</span>
-        <span class="n">num</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">strs</span>
- 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decimal_to_binary</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+  <span class="c1"># Check if the number is negative</span>
+  <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">is_negative</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">is_negative</span> <span class="o">=</span> <span class="kc">False</span>
 
+  <span class="c1"># Initialize the binary representation</span>
+  <span class="n">binary</span> <span class="o">=</span> <span class="s2">""</span>
 
+  <span class="c1"># Continuously divide the number by 2 and record the remainder until the number is 0</span>
+  <span class="k">while</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">binary</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">binary</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">//</span> <span class="mi">2</span>
 
+  <span class="c1"># If the number was negative, add a negative sign to the binary representation</span>
+  <span class="k">if</span> <span class="n">is_negative</span><span class="p">:</span>
+    <span class="n">binary</span> <span class="o">=</span> <span class="s2">"-"</span> <span class="o">+</span> <span class="n">binary</span>
 
-
-
-
-
-
-
-
- 
-<span class="c1"># function to reverse the string</span>
-<span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">strs</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">strs</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
- 
-<span class="c1"># Driver Code</span>
-<span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"what number do you choose?"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Binary of your number is:"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
-<span class="n">reverse</span><span class="p">(</span><span class="n">DecimalToBinary</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+  <span class="k">return</span> <span class="n">binary</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Binary of number is: </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-16-6454bb139512&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     19</span> num <span class="ansi-blue-fg">=</span> input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"what number do you choose?"</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     20</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Binary of number is:"</span><span class="ansi-blue-fg">,</span> end<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">" "</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 21</span><span class="ansi-red-fg"> </span>reverse<span class="ansi-blue-fg">(</span>DecimalToBinary<span class="ansi-blue-fg">(</span>num<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">&lt;ipython-input-16-6454bb139512&gt;</span> in <span class="ansi-cyan-fg">DecimalToBinary</span><span class="ansi-blue-fg">(num)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span>     <span class="ansi-green-fg">while</span> num<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span>         <span class="ansi-red-fg"># if (num &amp; 1) = 1</span>
-<span class="ansi-green-fg">----&gt; 5</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">if</span> <span class="ansi-blue-fg">(</span>num <span class="ansi-blue-fg">&amp;</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span>             strs <span class="ansi-blue-fg">+=</span> <span class="ansi-blue-fg">"1"</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span>         <span class="ansi-red-fg"># if (num &amp; 1) = 0</span>
-
-<span class="ansi-red-fg">TypeError</span>: unsupported operand type(s) for &amp;: 'str' and 'int'</pre>
-</div>
-</div>
-
 </div>
 </div>
 
