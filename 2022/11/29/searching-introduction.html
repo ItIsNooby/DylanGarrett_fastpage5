@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      8 min read
     
 </span></p>
 
@@ -160,104 +160,6 @@ window.onload = wrap_img;
     
 <div class="cell border-box-sizing code_cell rendered">
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/IPython/core/display.py:1032</span>, in <span class="ansi-cyan-fg">Image._data_and_metadata</span><span class="ansi-blue-fg">(self, always_both)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1031</span> try:
-<span class="ansi-green-fg">-&gt; 1032</span>     b64_data = b2a_base64(self.data).decode('ascii')
-<span class="ansi-green-intense-fg ansi-bold">   1033</span> except TypeError as e:
-
-<span class="ansi-red-fg">TypeError</span>: a bytes-like object is required, not 'str'
-
-The above exception was the direct cause of the following exception:
-
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/IPython/core/formatters.py:973</span>, in <span class="ansi-cyan-fg">MimeBundleFormatter.__call__</span><span class="ansi-blue-fg">(self, obj, include, exclude)</span>
-<span class="ansi-green-intense-fg ansi-bold">    970</span>     method = get_real_method(obj, self.print_method)
-<span class="ansi-green-intense-fg ansi-bold">    972</span>     if method is not None:
-<span class="ansi-green-fg">--&gt; 973</span>         return method(include=include, exclude=exclude)
-<span class="ansi-green-intense-fg ansi-bold">    974</span>     return None
-<span class="ansi-green-intense-fg ansi-bold">    975</span> else:
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/IPython/core/display.py:1022</span>, in <span class="ansi-cyan-fg">Image._repr_mimebundle_</span><span class="ansi-blue-fg">(self, include, exclude)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1020</span> if self.embed:
-<span class="ansi-green-intense-fg ansi-bold">   1021</span>     mimetype = self._mimetype
-<span class="ansi-green-fg">-&gt; 1022</span>     data, metadata = self._data_and_metadata(always_both=True)
-<span class="ansi-green-intense-fg ansi-bold">   1023</span>     if metadata:
-<span class="ansi-green-intense-fg ansi-bold">   1024</span>         metadata = {mimetype: metadata}
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/IPython/core/display.py:1034</span>, in <span class="ansi-cyan-fg">Image._data_and_metadata</span><span class="ansi-blue-fg">(self, always_both)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1032</span>     b64_data = b2a_base64(self.data).decode('ascii')
-<span class="ansi-green-intense-fg ansi-bold">   1033</span> except TypeError as e:
-<span class="ansi-green-fg">-&gt; 1034</span>     raise FileNotFoundError(
-<span class="ansi-green-intense-fg ansi-bold">   1035</span>         "No such file or directory: '%s'" % (self.data)) from e
-<span class="ansi-green-intense-fg ansi-bold">   1036</span> md = {}
-<span class="ansi-green-intense-fg ansi-bold">   1037</span> if self.metadata:
-
-<span class="ansi-red-fg">FileNotFoundError</span>: No such file or directory: '../images/SequentialSearch.png'</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/IPython/core/display.py:1032</span>, in <span class="ansi-cyan-fg">Image._data_and_metadata</span><span class="ansi-blue-fg">(self, always_both)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1031</span> try:
-<span class="ansi-green-fg">-&gt; 1032</span>     b64_data = b2a_base64(self.data).decode('ascii')
-<span class="ansi-green-intense-fg ansi-bold">   1033</span> except TypeError as e:
-
-<span class="ansi-red-fg">TypeError</span>: a bytes-like object is required, not 'str'
-
-The above exception was the direct cause of the following exception:
-
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/IPython/core/formatters.py:343</span>, in <span class="ansi-cyan-fg">BaseFormatter.__call__</span><span class="ansi-blue-fg">(self, obj)</span>
-<span class="ansi-green-intense-fg ansi-bold">    341</span>     method = get_real_method(obj, self.print_method)
-<span class="ansi-green-intense-fg ansi-bold">    342</span>     if method is not None:
-<span class="ansi-green-fg">--&gt; 343</span>         return method()
-<span class="ansi-green-intense-fg ansi-bold">    344</span>     return None
-<span class="ansi-green-intense-fg ansi-bold">    345</span> else:
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/IPython/core/display.py:1054</span>, in <span class="ansi-cyan-fg">Image._repr_png_</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1052</span> def _repr_png_(self):
-<span class="ansi-green-intense-fg ansi-bold">   1053</span>     if self.embed and self.format == self._FMT_PNG:
-<span class="ansi-green-fg">-&gt; 1054</span>         return self._data_and_metadata()
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/IPython/core/display.py:1034</span>, in <span class="ansi-cyan-fg">Image._data_and_metadata</span><span class="ansi-blue-fg">(self, always_both)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1032</span>     b64_data = b2a_base64(self.data).decode('ascii')
-<span class="ansi-green-intense-fg ansi-bold">   1033</span> except TypeError as e:
-<span class="ansi-green-fg">-&gt; 1034</span>     raise FileNotFoundError(
-<span class="ansi-green-intense-fg ansi-bold">   1035</span>         "No such file or directory: '%s'" % (self.data)) from e
-<span class="ansi-green-intense-fg ansi-bold">   1036</span> md = {}
-<span class="ansi-green-intense-fg ansi-bold">   1037</span> if self.metadata:
-
-<span class="ansi-red-fg">FileNotFoundError</span>: No such file or directory: '../images/SequentialSearch.png'</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;IPython.core.display.Image object&gt;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
     
 
@@ -276,12 +178,12 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/IPython
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">def</span> <span class="nx">sequentialSearch</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">target</span><span class="p">)</span><span class="o">:</span>
-    <span class="nx">N</span> <span class="o">=</span> <span class="nx">len</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span>                     <span class="err">#</span> <span class="nx">Declare</span> <span class="nx">N</span> <span class="nx">as</span> <span class="nx">length</span> <span class="k">of</span> <span class="nx">array</span>
-    <span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">range</span><span class="p">(</span><span class="nx">N</span><span class="p">)</span><span class="o">:</span>               <span class="err">#</span> <span class="nx">Iterate</span> <span class="nx">over</span> <span class="nx">the</span> <span class="nx">list</span>
-        <span class="k">if</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">==</span> <span class="nx">target</span><span class="o">:</span>         <span class="err">#</span> <span class="nx">Check</span> <span class="k">for</span> <span class="nx">match</span>
-            <span class="k">return</span> <span class="nx">i</span>                 <span class="err">#</span> <span class="nx">Match</span> <span class="nx">found</span><span class="p">,</span> <span class="k">return</span> <span class="nx">index</span> <span class="nx">and</span> <span class="nx">end</span> <span class="kd">function</span> <span class="nx">call</span>
-    <span class="k">return</span> <span class="o">-</span><span class="mf">1</span>                        <span class="err">#</span> <span class="nx">Element</span> <span class="nx">not</span> <span class="nx">found</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sequentialSearch</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>                     <span class="c1"># Declare N as length of array</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>               <span class="c1"># Iterate over the list</span>
+        <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>         <span class="c1"># Check for match</span>
+            <span class="k">return</span> <span class="n">i</span>                 <span class="c1"># Match found, return index and end function call</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>                        <span class="c1"># Element not found</span>
 </pre></div>
 
     </div>
@@ -319,10 +221,10 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/IPython
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kr">import</span> <span class="nx">time</span>
-<span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="nx">i</span> <span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">range</span><span class="p">(</span><span class="mf">100</span><span class="p">)]</span>
-<span class="nx">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="nx">i</span> <span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">range</span><span class="p">(</span><span class="mf">1000000</span><span class="p">)]</span>
-<span class="nx">arr3</span> <span class="o">=</span> <span class="p">[</span><span class="nx">i</span> <span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">range</span><span class="p">(</span><span class="mf">100000000</span><span class="p">)]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="n">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)]</span>
+<span class="n">arr3</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100000000</span><span class="p">)]</span>
 </pre></div>
 
     </div>
@@ -373,11 +275,11 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/IPython
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">print</span><span class="p">(</span><span class="s2">"length of list: "</span><span class="p">,</span> <span class="nx">len</span><span class="p">(</span><span class="nx">arr1</span><span class="p">))</span>
-<span class="nx">s</span> <span class="o">=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">time</span><span class="p">()</span>
-<span class="nx">print</span><span class="p">(</span><span class="s2">"Index: "</span><span class="p">,</span> <span class="nx">sequentialSearch</span><span class="p">(</span><span class="nx">arr1</span><span class="p">,</span><span class="mf">99</span><span class="p">))</span>
-<span class="nx">e</span> <span class="o">=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">time</span><span class="p">()</span>
-<span class="nx">print</span><span class="p">(</span><span class="s1">'Execution time:'</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="o">-</span><span class="nx">s</span><span class="p">)</span><span class="o">*</span><span class="mf">1000</span><span class="p">,</span> <span class="s1">'ms'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"length of list: "</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr1</span><span class="p">))</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Index: "</span><span class="p">,</span> <span class="n">sequentialSearch</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span><span class="mi">99</span><span class="p">))</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Execution time:'</span><span class="p">,</span> <span class="p">(</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="s1">'ms'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -425,11 +327,11 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/IPython
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">print</span><span class="p">(</span><span class="s2">"length of list: "</span><span class="p">,</span> <span class="nx">len</span><span class="p">(</span><span class="nx">arr2</span><span class="p">))</span>
-<span class="nx">s</span> <span class="o">=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">time</span><span class="p">()</span>
-<span class="nx">print</span><span class="p">(</span><span class="s2">"Index: "</span><span class="p">,</span> <span class="nx">sequentialSearch</span><span class="p">(</span><span class="nx">arr2</span><span class="p">,</span><span class="mf">999999</span><span class="p">))</span>
-<span class="nx">e</span> <span class="o">=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">time</span><span class="p">()</span>
-<span class="nx">print</span><span class="p">(</span><span class="s1">'Execution time:'</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="o">-</span><span class="nx">s</span><span class="p">)</span><span class="o">*</span><span class="mf">1000</span><span class="p">,</span> <span class="s1">'ms'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"length of list: "</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr2</span><span class="p">))</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Index: "</span><span class="p">,</span> <span class="n">sequentialSearch</span><span class="p">(</span><span class="n">arr2</span><span class="p">,</span><span class="mi">999999</span><span class="p">))</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Execution time:'</span><span class="p">,</span> <span class="p">(</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="s1">'ms'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -462,11 +364,11 @@ Execution time: 58.67457389831543 ms
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">print</span><span class="p">(</span><span class="s2">"length of list: "</span><span class="p">,</span> <span class="nx">len</span><span class="p">(</span><span class="nx">arr3</span><span class="p">))</span>
-<span class="nx">s</span> <span class="o">=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">time</span><span class="p">()</span>
-<span class="nx">print</span><span class="p">(</span><span class="s2">"Index: "</span><span class="p">,</span> <span class="nx">sequentialSearch</span><span class="p">(</span><span class="nx">arr3</span><span class="p">,</span><span class="mf">99999999</span><span class="p">))</span>
-<span class="nx">e</span> <span class="o">=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">time</span><span class="p">()</span>
-<span class="nx">print</span><span class="p">(</span><span class="s1">'Execution time:'</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="o">-</span><span class="nx">s</span><span class="p">)</span><span class="o">*</span><span class="mf">1000</span><span class="p">,</span> <span class="s1">'ms'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"length of list: "</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr3</span><span class="p">))</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Index: "</span><span class="p">,</span> <span class="n">sequentialSearch</span><span class="p">(</span><span class="n">arr3</span><span class="p">,</span><span class="mi">99999999</span><span class="p">))</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Execution time:'</span><span class="p">,</span> <span class="p">(</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="s1">'ms'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -587,19 +489,19 @@ Execution time: 5162.384986877441 ms
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">def</span> <span class="nx">binarySearch</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">target</span><span class="p">)</span><span class="o">:</span>            <span class="err">#</span> <span class="nx">Parameters</span><span class="o">:</span> <span class="nx">array</span> <span class="nx">is</span> <span class="nx">the</span> <span class="nx">given</span> <span class="nx">array</span> <span class="nx">and</span> <span class="nx">target</span> <span class="nx">is</span> <span class="nx">what</span> <span class="nx">we</span> <span class="nx">are</span> <span class="nx">looking</span> <span class="k">for</span>
-    <span class="nx">low</span> <span class="o">=</span> <span class="mf">0</span>                                 <span class="err">#</span> <span class="nx">the</span> <span class="nx">starting</span> <span class="nx">lower</span> <span class="nx">bound</span>
-    <span class="nx">high</span> <span class="o">=</span> <span class="nx">len</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span><span class="o">-</span><span class="mf">1</span>                     <span class="err">#</span> <span class="nx">the</span> <span class="nx">starting</span> <span class="nx">upper</span> <span class="nx">bound</span>
-    <span class="k">while</span> <span class="nx">high</span> <span class="o">&gt;=</span> <span class="nx">low</span><span class="o">:</span>                      <span class="err">#</span> <span class="nx">we</span> <span class="nx">will</span> <span class="nx">keep</span> <span class="nx">running</span> <span class="nx">until</span> <span class="nx">we</span> <span class="nx">run</span> <span class="nx">out</span> <span class="k">of</span> <span class="nx">possible</span> <span class="nx">subarrays</span><span class="p">...</span>
-        <span class="nx">mid</span> <span class="o">=</span> <span class="p">(</span><span class="nx">high</span> <span class="o">+</span> <span class="nx">low</span><span class="p">)</span> <span class="c1">// 2             #   define the middle of the list to be the item at the index of the average of the lower and upper bound</span>
-        <span class="k">if</span> <span class="nx">array</span><span class="p">[</span><span class="nx">mid</span><span class="p">]</span> <span class="o">==</span> <span class="nx">target</span><span class="o">:</span>            <span class="err">#</span>   <span class="k">if</span> <span class="nx">item</span> <span class="nx">is</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">middle</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">list</span><span class="p">...</span> <span class="nx">we</span> <span class="nx">found</span> <span class="nx">what</span> <span class="nx">we</span> <span class="nx">are</span> <span class="nx">looking</span> <span class="k">for</span><span class="o">!</span>
-            <span class="k">return</span> <span class="nx">mid</span>                      <span class="err">#</span>       <span class="nx">therefore</span><span class="p">,</span> <span class="nx">we</span> <span class="k">return</span> <span class="nx">the</span> <span class="nx">index</span> <span class="k">of</span> <span class="nx">where</span> <span class="nx">we</span> <span class="nx">found</span> <span class="nx">the</span> <span class="nx">item</span><span class="p">.</span>
-        <span class="nx">elif</span> <span class="nx">array</span><span class="p">[</span><span class="nx">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">target</span><span class="o">:</span>           <span class="err">#</span>   <span class="k">if</span> <span class="nx">item</span> <span class="nx">is</span> <span class="nx">less</span> <span class="nx">than</span> <span class="nx">the</span> <span class="nx">middle</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">list</span><span class="p">,</span> <span class="k">this</span> <span class="nx">must</span> <span class="nx">mean</span> <span class="nx">that</span> <span class="nx">the</span> <span class="nx">item</span> <span class="nx">is</span> <span class="nx">on</span> <span class="nx">the</span> <span class="nx">lower</span> <span class="nx">half</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">list</span>
-            <span class="nx">high</span> <span class="o">=</span> <span class="nx">mid</span><span class="o">-</span><span class="mf">1</span>                    <span class="err">#</span>       <span class="nx">therefore</span><span class="p">,</span> <span class="nx">we</span> <span class="nx">set</span> <span class="nx">the</span> <span class="nx">upper</span> <span class="nx">bound</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">search</span> <span class="nx">to</span> <span class="nx">be</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">item</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">lower</span> <span class="nx">half</span>
-        <span class="k">else</span><span class="o">:</span>                               <span class="err">#</span>   <span class="k">if</span> <span class="nx">item</span> <span class="nx">is</span> <span class="nx">neither</span> <span class="nx">less</span> <span class="nx">than</span> <span class="nx">or</span> <span class="nx">equal</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">middle</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">list</span><span class="p">,</span> <span class="k">this</span> <span class="nx">must</span> <span class="nx">mean</span> <span class="nx">that</span> <span class="nx">the</span> <span class="nx">item</span> <span class="nx">is</span> <span class="nx">on</span> <span class="nx">the</span> <span class="nx">upper</span> <span class="nx">half</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">list</span>
-            <span class="nx">low</span> <span class="o">=</span> <span class="nx">mid</span><span class="o">+</span><span class="mf">1</span>                     <span class="err">#</span>       <span class="nx">therefore</span><span class="p">,</span> <span class="nx">we</span> <span class="nx">set</span> <span class="nx">the</span> <span class="nx">lower</span> <span class="nx">bound</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">search</span> <span class="nx">to</span> <span class="nx">be</span> <span class="nx">the</span> <span class="nx">first</span> <span class="nx">item</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">upper</span> <span class="nx">half</span>
-                                            <span class="err">#</span> <span class="k">if</span> <span class="nx">nothing</span> <span class="nx">is</span> <span class="nx">returned</span> <span class="nx">by</span> <span class="nx">the</span> <span class="nx">time</span> <span class="nx">the</span> <span class="k">while</span> <span class="nx">loop</span> <span class="nx">ends</span><span class="p">,</span> <span class="nx">that</span> <span class="nx">means</span> <span class="nx">item</span> <span class="nx">MUST</span> <span class="nx">be</span> <span class="nx">missing</span> <span class="nx">from</span> <span class="nx">list</span>
-    <span class="k">return</span> <span class="nx">False</span>                            <span class="err">#</span>   <span class="nx">therefore</span> <span class="nx">we</span> <span class="nx">tell</span> <span class="nx">the</span> <span class="nx">user</span> <span class="nx">that</span> <span class="nx">the</span> <span class="nx">requested</span> <span class="nx">item</span> <span class="nx">was</span> <span class="nx">not</span> <span class="nx">found</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">binarySearch</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>            <span class="c1"># Parameters: array is the given array and target is what we are looking for</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>                                 <span class="c1"># the starting lower bound</span>
+    <span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">array</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>                     <span class="c1"># the starting upper bound</span>
+    <span class="k">while</span> <span class="n">high</span> <span class="o">&gt;=</span> <span class="n">low</span><span class="p">:</span>                      <span class="c1"># we will keep running until we run out of possible subarrays...</span>
+        <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">high</span> <span class="o">+</span> <span class="n">low</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>             <span class="c1">#   define the middle of the list to be the item at the index of the average of the lower and upper bound</span>
+        <span class="k">if</span> <span class="n">array</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>            <span class="c1">#   if item is in the middle of the list... we found what we are looking for!</span>
+            <span class="k">return</span> <span class="n">mid</span>                      <span class="c1">#       therefore, we return the index of where we found the item.</span>
+        <span class="k">elif</span> <span class="n">array</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">target</span><span class="p">:</span>           <span class="c1">#   if item is less than the middle of the list, this must mean that the item is on the lower half of the list</span>
+            <span class="n">high</span> <span class="o">=</span> <span class="n">mid</span><span class="o">-</span><span class="mi">1</span>                    <span class="c1">#       therefore, we set the upper bound of the search to be the last item of the lower half</span>
+        <span class="k">else</span><span class="p">:</span>                               <span class="c1">#   if item is neither less than or equal to the middle of the list, this must mean that the item is on the upper half of the list</span>
+            <span class="n">low</span> <span class="o">=</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span>                     <span class="c1">#       therefore, we set the lower bound of the search to be the first item of the upper half</span>
+                                            <span class="c1"># if nothing is returned by the time the while loop ends, that means item MUST be missing from list</span>
+    <span class="k">return</span> <span class="kc">False</span>                            <span class="c1">#   therefore we tell the user that the requested item was not found</span>
 </pre></div>
 
     </div>
@@ -624,16 +526,16 @@ Execution time: 5162.384986877441 ms
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">def</span> <span class="nx">BinarySearchRecursion</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">lo</span><span class="p">,</span> <span class="nx">hi</span><span class="p">)</span><span class="o">:</span>
-    <span class="k">if</span> <span class="nx">lo</span> <span class="o">&gt;</span> <span class="nx">hi</span><span class="o">:</span>
-        <span class="k">return</span> <span class="nx">False</span>
-    <span class="nx">mid</span> <span class="o">=</span> <span class="p">(</span><span class="nx">lo</span><span class="o">+</span><span class="nx">hi</span><span class="p">)</span><span class="c1">//2</span>
-    <span class="k">if</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">mid</span><span class="p">]</span> <span class="o">==</span> <span class="nx">target</span><span class="o">:</span>
-        <span class="k">return</span> <span class="nx">mid</span>
-    <span class="nx">elif</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">target</span><span class="o">:</span>
-        <span class="k">return</span> <span class="nx">BinarySearchRecursion</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">lo</span><span class="p">,</span> <span class="nx">mid</span><span class="o">-</span><span class="mf">1</span><span class="p">)</span>
-    <span class="nx">elif</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">mid</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">target</span><span class="o">:</span>
-        <span class="k">return</span> <span class="nx">BinarySearchRecursion</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">mid</span><span class="o">+</span><span class="mf">1</span><span class="p">,</span> <span class="nx">hi</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">BinarySearchRecursion</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">lo</span> <span class="o">&gt;</span> <span class="n">hi</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">lo</span><span class="o">+</span><span class="n">hi</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+    <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">mid</span>
+    <span class="k">elif</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">target</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">BinarySearchRecursion</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">lo</span><span class="p">,</span> <span class="n">mid</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">target</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">BinarySearchRecursion</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">hi</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -658,11 +560,11 @@ Execution time: 5162.384986877441 ms
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">print</span><span class="p">(</span><span class="s2">"length of list: "</span><span class="p">,</span> <span class="nx">len</span><span class="p">(</span><span class="nx">arr1</span><span class="p">))</span>
-<span class="nx">s</span> <span class="o">=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">time</span><span class="p">()</span>
-<span class="nx">print</span><span class="p">(</span><span class="s2">"Index: "</span><span class="p">,</span> <span class="nx">binarySearch</span><span class="p">(</span><span class="nx">arr1</span><span class="p">,</span><span class="mf">99</span><span class="p">))</span>
-<span class="nx">e</span> <span class="o">=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">time</span><span class="p">()</span>
-<span class="nx">print</span><span class="p">(</span><span class="s1">'Execution time:'</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="o">-</span><span class="nx">s</span><span class="p">)</span><span class="o">*</span><span class="mf">1000</span><span class="p">,</span> <span class="s1">'ms'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"length of list: "</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr1</span><span class="p">))</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Index: "</span><span class="p">,</span> <span class="n">binarySearch</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span><span class="mi">99</span><span class="p">))</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Execution time:'</span><span class="p">,</span> <span class="p">(</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="s1">'ms'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -695,11 +597,11 @@ Execution time: 0.05507469177246094 ms
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">print</span><span class="p">(</span><span class="s2">"length of list: "</span><span class="p">,</span> <span class="nx">len</span><span class="p">(</span><span class="nx">arr2</span><span class="p">))</span>
-<span class="nx">s</span> <span class="o">=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">time</span><span class="p">()</span>
-<span class="nx">print</span><span class="p">(</span><span class="s2">"Index: "</span><span class="p">,</span> <span class="nx">binarySearch</span><span class="p">(</span><span class="nx">arr2</span><span class="p">,</span><span class="mf">999999</span><span class="p">))</span>
-<span class="nx">e</span> <span class="o">=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">time</span><span class="p">()</span>
-<span class="nx">print</span><span class="p">(</span><span class="s1">'Execution time:'</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="o">-</span><span class="nx">s</span><span class="p">)</span><span class="o">*</span><span class="mf">1000</span><span class="p">,</span> <span class="s1">'ms'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"length of list: "</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr2</span><span class="p">))</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Index: "</span><span class="p">,</span> <span class="n">binarySearch</span><span class="p">(</span><span class="n">arr2</span><span class="p">,</span><span class="mi">999999</span><span class="p">))</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Execution time:'</span><span class="p">,</span> <span class="p">(</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="s1">'ms'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -732,11 +634,11 @@ Execution time: 0.17070770263671875 ms
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">print</span><span class="p">(</span><span class="s2">"length of list: "</span><span class="p">,</span> <span class="nx">len</span><span class="p">(</span><span class="nx">arr3</span><span class="p">))</span>
-<span class="nx">s</span> <span class="o">=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">time</span><span class="p">()</span>
-<span class="nx">print</span><span class="p">(</span><span class="s2">"Index: "</span><span class="p">,</span> <span class="nx">binarySearch</span><span class="p">(</span><span class="nx">arr3</span><span class="p">,</span><span class="mf">99999999</span><span class="p">))</span>
-<span class="nx">e</span> <span class="o">=</span> <span class="nx">time</span><span class="p">.</span><span class="nx">time</span><span class="p">()</span>
-<span class="nx">print</span><span class="p">(</span><span class="s1">'Execution time:'</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="o">-</span><span class="nx">s</span><span class="p">)</span><span class="o">*</span><span class="mf">1000</span><span class="p">,</span> <span class="s1">'ms'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"length of list: "</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr3</span><span class="p">))</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Index: "</span><span class="p">,</span> <span class="n">binarySearch</span><span class="p">(</span><span class="n">arr3</span><span class="p">,</span><span class="mi">99999999</span><span class="p">))</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Execution time:'</span><span class="p">,</span> <span class="p">(</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="s1">'ms'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -769,8 +671,8 @@ Execution time: 0.06628036499023438 ms
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">arr4</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="mf">8</span><span class="p">,</span><span class="mf">10</span><span class="p">,</span><span class="mf">13</span><span class="p">,</span><span class="mf">145</span><span class="p">,</span><span class="mf">1938</span><span class="p">]</span>
-<span class="nx">print</span><span class="p">(</span><span class="s2">"Index: "</span><span class="p">,</span> <span class="nx">binarySearch</span><span class="p">(</span><span class="nx">arr4</span><span class="p">,</span><span class="mf">17</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr4</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">145</span><span class="p">,</span><span class="mi">1938</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Index: "</span><span class="p">,</span> <span class="n">binarySearch</span><span class="p">(</span><span class="n">arr4</span><span class="p">,</span><span class="mi">17</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -828,9 +730,9 @@ Execution time: 0.06628036499023438 ms
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">def</span> <span class="nx">sqrt</span><span class="p">(</span><span class="nx">N</span><span class="p">)</span><span class="o">:</span>
-    <span class="err">#</span> <span class="nx">Write</span> <span class="nx">your</span> <span class="nx">code</span> <span class="nx">here</span>
-    <span class="k">return</span> <span class="nx">None</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sqrt</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="c1"># Write your code here</span>
+    <span class="k">return</span> <span class="kc">None</span>
 </pre></div>
 
     </div>
@@ -865,18 +767,18 @@ Execution time: 0.06628036499023438 ms
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">from</span> <span class="nx">math</span> <span class="kr">import</span> <span class="nx">sqrt</span> <span class="nx">as</span> <span class="nx">sq</span>
-<span class="nx">test_cases</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">85248289</span><span class="p">,</span><span class="mf">22297284</span><span class="p">,</span><span class="mf">18939904</span><span class="p">,</span><span class="mf">91107025</span><span class="p">,</span><span class="mf">69122596</span><span class="p">,</span><span class="mf">9721924</span><span class="p">,</span><span class="mf">37810201</span><span class="p">,</span><span class="mf">1893294144</span><span class="p">,</span><span class="mf">8722812816</span><span class="p">,</span><span class="mf">644398225</span><span class="p">]</span>
-<span class="nx">answers</span> <span class="o">=</span> <span class="p">[</span><span class="kr">int</span><span class="p">(</span><span class="nx">sq</span><span class="p">(</span><span class="nx">x</span><span class="p">))</span> <span class="k">for</span> <span class="nx">x</span> <span class="k">in</span> <span class="nx">test_cases</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span> <span class="k">as</span> <span class="n">sq</span>
+<span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">85248289</span><span class="p">,</span><span class="mi">22297284</span><span class="p">,</span><span class="mi">18939904</span><span class="p">,</span><span class="mi">91107025</span><span class="p">,</span><span class="mi">69122596</span><span class="p">,</span><span class="mi">9721924</span><span class="p">,</span><span class="mi">37810201</span><span class="p">,</span><span class="mi">1893294144</span><span class="p">,</span><span class="mi">8722812816</span><span class="p">,</span><span class="mi">644398225</span><span class="p">]</span>
+<span class="n">answers</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">sq</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">test_cases</span><span class="p">]</span>
 
-<span class="nx">def</span> <span class="nx">checkValid</span><span class="p">()</span><span class="o">:</span>
-    <span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">range</span><span class="p">(</span><span class="nx">len</span><span class="p">(</span><span class="nx">test_cases</span><span class="p">))</span><span class="o">:</span>
-        <span class="k">if</span> <span class="nx">sqrt</span><span class="p">(</span><span class="nx">test_cases</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">==</span> <span class="nx">answers</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">:</span>
-            <span class="nx">print</span><span class="p">(</span><span class="s2">"Check number {} passed"</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="mf">1</span><span class="p">))</span>
-        <span class="k">else</span><span class="o">:</span>
-            <span class="nx">print</span><span class="p">(</span><span class="s2">"Check number {} failed"</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="mf">1</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">checkValid</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">test_cases</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">test_cases</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">answers</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Check number </span><span class="si">{}</span><span class="s2"> passed"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Check number </span><span class="si">{}</span><span class="s2"> failed"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
 
-<span class="nx">checkValid</span><span class="p">()</span>
+<span class="n">checkValid</span><span class="p">()</span>
 </pre></div>
 
     </div>
